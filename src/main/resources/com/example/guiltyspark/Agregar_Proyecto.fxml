@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #3a085e;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiltyspark.controller.CONTROLLER_Agregar_Proyecto">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #b1b1b1;" AnchorPane.bottomAnchor="719.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="btn_regresar" fitHeight="37.0" fitWidth="37.0" layoutX="29.0" layoutY="6.0" onMouseClicked="#regresar" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="29.0">
+               <image>
+                  <Image url="@img/icon_back.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_cerrar" fitHeight="37.0" fitWidth="40.0" layoutX="1309.0" layoutY="6.0" onMouseClicked="#cerrar" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="17.0">
+               <image>
+                  <Image url="@img/icono_x.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="130.0" layoutY="82.0" prefHeight="621.0" prefWidth="1192.0" style="-fx-background-color: #b1b1b1; -fx-background-radius: 30;" AnchorPane.bottomAnchor="106.0" AnchorPane.leftAnchor="92.0" AnchorPane.rightAnchor="92.0" AnchorPane.topAnchor="106.0">
+         <children>
+            <Button fx:id="btn_Ingresar" layoutX="543.0" layoutY="473.0" mnemonicParsing="false" onAction="#Btn_Ingresar" style="-fx-background-radius: 10;" text="Ingresar">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="516.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icono_proc.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="504.0" layoutY="222.0" text="Nombre del proyecto:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="202.0" layoutY="275.0" text="Fecha de inicio:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="849.0" layoutY="275.0" prefHeight="0.0" prefWidth="165.0" text="Fecha de finalización">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_NombreProyecto" layoutX="517.0" layoutY="249.0" style="-fx-background-radius: 10;" />
+            <DatePicker fx:id="Date_FechaInicio" layoutX="176.0" layoutY="305.0" style="-fx-background-radius: 10;" />
+            <DatePicker fx:id="Date_FechaFin" layoutX="845.0" layoutY="305.0" style="-fx-background-radius: 10;" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

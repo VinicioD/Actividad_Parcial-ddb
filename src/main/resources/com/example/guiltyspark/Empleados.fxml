@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #3a085e;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiltyspark.controller.CONTROLLER_Empleados">
+   <children>
+      <AnchorPane prefHeight="49.0" prefWidth="1366.0" style="-fx-background-color: #b1b1b1;" AnchorPane.bottomAnchor="719.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="btn_cerrar" fitHeight="37.0" fitWidth="40.0" layoutX="1312.0" layoutY="6.0" onMouseClicked="#cerrar" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="17.0">
+               <image>
+                  <Image url="@img/icono_x.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_regresar" fitHeight="37.0" fitWidth="37.0" layoutX="29.0" layoutY="6.0" onMouseClicked="#regresar" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="29.0">
+               <image>
+                  <Image url="@img/icon_back.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane layoutX="82.0" layoutY="95.0" prefHeight="632.0" prefWidth="275.0" style="-fx-background-color: #b1b1b1; -fx-background-radius: 30;" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="82.0" AnchorPane.rightAnchor="1009.0" AnchorPane.topAnchor="95.0">
+         <children>
+            <Label layoutX="73.0" layoutY="90.0" text="Empleados" textFill="#3a085e">
+               <font>
+                  <Font name="Arial Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="btn_agregar" fitHeight="46.0" fitWidth="37.0" layoutX="119.0" layoutY="557.0" onMouseClicked="#Agregar_empleado" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icono_agregar.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tbl_Empleados" layoutY="140.0" prefHeight="305.0" prefWidth="275.0" style="-fx-background-radius: 30;">
+              <columns>
+                <TableColumn prefWidth="75.0" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="539.0" layoutY="95.0" prefHeight="632.0" prefWidth="683.0" style="-fx-background-color: #b1b1b1; -fx-background-radius: 30;" AnchorPane.bottomAnchor="41.0" AnchorPane.rightAnchor="144.0" AnchorPane.topAnchor="95.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="96.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icono_usuario.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="342.0" layoutY="61.0" text="Nombres: ">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="343.0" layoutY="123.0" text="Apellidos:">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <Pane layoutY="222.0" prefHeight="414.0" prefWidth="683.0" style="-fx-background-color: #c2c2c2; -fx-background-radius: 30;" AnchorPane.bottomAnchor="0.0">
+               <children>
+                  <Label layoutX="80.0" layoutY="36.0" text="Departamento:">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="385.0" layoutY="200.0" text="Ultimo proyecto:">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="80.0" layoutY="200.0" text="Fecha de contraración:">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="374.0" layoutY="36.0" prefHeight="0.0" prefWidth="58.0" text="Cargo:">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Departamento_Empleado" layoutX="80.0" layoutY="55.0" text="...">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="377.0" layoutY="55.0" text="...">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Contrato_Empleado" layoutX="80.0" layoutY="221.0" text="...">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="UP_Empleado" layoutX="395.0" layoutY="221.0" text="...">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label fx:id="Nombre_empleado" layoutX="432.0" layoutY="63.0" text="...">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="Apellido_Empleado" layoutX="432.0" layoutY="123.0" text="...">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
