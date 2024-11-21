@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #3a085e;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiltyspark.controller.CONTROLLER_Proyectos">
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" styleClass="login-bg" stylesheets="@style/for_all.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiltyspark.controller.CONTROLLER_Proyectos">
    <children>
       <AnchorPane prefHeight="46.0" prefWidth="1366.0" style="-fx-background-color: #b1b1b1;" AnchorPane.bottomAnchor="722.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -22,7 +24,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="105.0" layoutY="95.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #b1b1b1; -fx-background-radius: 30;" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="105.0" AnchorPane.rightAnchor="986.0" AnchorPane.topAnchor="95.0">
+      <AnchorPane layoutX="105.0" layoutY="95.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 30;" styleClass="panel" stylesheets="@style/for_all.css" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="105.0" AnchorPane.rightAnchor="986.0" AnchorPane.topAnchor="95.0">
          <children>
             <Label layoutX="79.0" layoutY="127.0" text="Proyectos" textFill="#3a085e">
                <font>
@@ -34,33 +36,59 @@
                   <Image url="@img/icono_agregar.png" />
                </image>
             </ImageView>
+            <TableView fx:id="table_Proyectos" layoutX="38.0" layoutY="191.0" prefHeight="268.0" prefWidth="200.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="518.0" layoutY="123.0" prefHeight="632.0" prefWidth="677.0" style="-fx-background-color: #b1b1b1; -fx-background-radius: 30;" AnchorPane.bottomAnchor="41.0" AnchorPane.rightAnchor="114.0" AnchorPane.topAnchor="95.0">
+      <AnchorPane layoutX="518.0" layoutY="123.0" prefHeight="632.0" prefWidth="677.0" style="-fx-background-radius: 30;" styleClass="panel" stylesheets="@style/for_all.css" AnchorPane.bottomAnchor="41.0" AnchorPane.rightAnchor="114.0" AnchorPane.topAnchor="95.0">
          <children>
-            <Label layoutX="275.0" layoutY="45.0" text="Nombre Clave:" textFill="#3a085e">
+            <Label layoutX="275.0" layoutY="168.0" text="Nombre Clave:" textFill="#3a085e">
                <font>
                   <Font name="Arial Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="285.0" layoutY="414.0" text="Descripción " textFill="#3a085e">
+            <Label layoutX="85.0" layoutY="232.0" text="Fecha de inicio:" textFill="#3a085e">
                <font>
                   <Font name="Arial Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="89.0" layoutY="131.0" text="Fecha de inicio:" textFill="#3a085e">
+            <Label layoutX="249.0" layoutY="393.0" text="Estado del proyecto:" textFill="#3a085e">
                <font>
                   <Font name="Arial Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="250.0" layoutY="237.0" text="Estado del proyecto:" textFill="#3a085e">
+            <Label layoutX="481.0" layoutY="243.0" text="Fecha limite:" textFill="#3a085e">
                <font>
                   <Font name="Arial Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="492.0" layoutY="131.0" text="Fecha limite:" textFill="#3a085e">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="264.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icono_proc.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="Nombre_proyecto" layoutX="275.0" layoutY="200.0" text="...">
                <font>
-                  <Font name="Arial Bold Italic" size="18.0" />
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="Estado_proyecto" layoutX="333.0" layoutY="435.0" text="...">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="Inicio_proyecto" layoutX="90.0" layoutY="262.0" text="...">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="Fin_proyecto" layoutX="481.0" layoutY="270.0" prefHeight="16.0" prefWidth="0.0" text="...">
+               <font>
+                  <Font name="Arial" size="14.0" />
                </font>
             </Label>
          </children>

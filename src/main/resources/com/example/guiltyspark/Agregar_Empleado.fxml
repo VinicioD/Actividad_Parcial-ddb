@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #3a085e;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiltyspark.controller.CONTROLLER_Agregar_Empleado">
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" styleClass="login-bg" stylesheets="@style/for_all.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiltyspark.controller.CONTROLLER_Agregar_Empleado">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #b1b1b1;" AnchorPane.bottomAnchor="719.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -27,9 +27,9 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="92.0" layoutY="106.0" prefHeight="621.0" prefWidth="1192.0" style="-fx-background-color: #b1b1b1; -fx-background-radius: 30;" AnchorPane.bottomAnchor="106.0" AnchorPane.leftAnchor="92.0" AnchorPane.rightAnchor="92.0" AnchorPane.topAnchor="106.0">
+      <AnchorPane layoutX="92.0" layoutY="106.0" prefHeight="621.0" prefWidth="1192.0" style="-fx-background-radius: 30;" styleClass="panel" stylesheets="@style/for_all.css" AnchorPane.bottomAnchor="106.0" AnchorPane.leftAnchor="92.0" AnchorPane.rightAnchor="92.0" AnchorPane.topAnchor="106.0">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="516.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="530.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/icono_usuario.png" />
                </image>
@@ -110,10 +110,10 @@
                </font>
             </TextField>
             <DatePicker fx:id="Calend_Fecha" layoutX="832.0" layoutY="322.0" style="-fx-background-radius: 10;" />
-            <ComboBox fx:id="Cb_Departamento" layoutX="516.0" layoutY="232.0" prefWidth="150.0" style="-fx-background-radius: 10;" />
+            <ComboBox fx:id="Cb_Departamento" layoutX="516.0" layoutY="232.0" prefWidth="150.0" style="-fx-background-radius: 10;" styleClass="text-field" stylesheets="@style/for_all.css" />
             <RadioButton fx:id="Rdb_Activo" layoutX="833.0" layoutY="406.0" mnemonicParsing="false" text="Activo" />
             <RadioButton fx:id="Rdb_Inactivo" layoutX="896.0" layoutY="406.0" mnemonicParsing="false" text="Inactivo" />
-            <Button fx:id="Btn_Ingresar" layoutX="538.0" layoutY="475.0" mnemonicParsing="false" onAction="#Btn_Ingresar" prefHeight="49.0" prefWidth="106.0" style="-fx-background-radius: 20;" text="Ingresar">
+            <Button fx:id="Btn_Ingresar" layoutX="511.0" layoutY="476.0" mnemonicParsing="false" onAction="#Btn_Ingresar" prefHeight="49.0" prefWidth="106.0" style="-fx-background-radius: 20;" styleClass="button-init" stylesheets="@style/for_all.css" text="Ingresar">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>

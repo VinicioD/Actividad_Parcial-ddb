@@ -1,0 +1,15 @@
+
+.login-bg{
+    -fx-background-color:linear-gradient(to bottom right, #000000, #3a085e,  #3a085e);
+}
+
+.panel {
+    -fx-background-color: rgba(177, 177, 177, 0.8); /* Color de fondo gris con algo de transparencia */
+    -fx-background-radius: 30; /* Bordes redondeados */
+    -fx-padding: 20; /* Espaciado interno */
+    -fx-text-fill: black; /* Color del texto */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 4, 0, 0, 4); /* Sombra del panel */
+}
+
+
+

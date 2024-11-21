@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #3a085e;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiltyspark.controller.CONTROLLER_Estadisticas">
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" styleClass="login-bg" stylesheets="@style/Empleados.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiltyspark.controller.CONTROLLER_Estadisticas">
    <children>
-      <AnchorPane prefHeight="46.0" prefWidth="1366.0" style="-fx-background-color: #b1b1b1;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <AnchorPane prefHeight="46.0" prefWidth="1369.0" style="-fx-background-color: #b1b1b1;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="64.0">
          <children>
             <ImageView fx:id="btn_cerrar" fitHeight="37.0" fitWidth="40.0" layoutX="731.0" layoutY="5.0" onMouseClicked="#cerrar" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="17.0">
                <image>
@@ -24,14 +24,14 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="42.0" layoutY="84.0" prefHeight="630.0" prefWidth="252.0" style="-fx-background-color: #b1b1b1; -fx-background-radius: 30;" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="82.0" AnchorPane.rightAnchor="1009.0" AnchorPane.topAnchor="95.0">
+      <AnchorPane layoutX="42.0" layoutY="84.0" prefHeight="632.0" prefWidth="314.0" style="-fx-background-radius: 30;" styleClass="panel" stylesheets="@style/for_all.css" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="82.0" AnchorPane.rightAnchor="1037.0" AnchorPane.topAnchor="95.0">
          <children>
-            <Label layoutX="67.0" layoutY="110.0" text="Estadisticas" textFill="#3a085e">
+            <Label layoutX="87.0" layoutY="103.0" text="Estadisticas" textFill="#3a085e">
                <font>
                   <Font name="Arial Bold Italic" size="24.0" />
                </font>
             </Label>
-            <Button fx:id="btn_Empleados" layoutX="2.0" layoutY="212.0" mnemonicParsing="false" onAction="#btn_Empleados" prefHeight="64.0" prefWidth="272.0" style="-fx-background-color: #c2c2c2; -fx-background-radius: 60;" text="Empleados" textFill="#3a085e">
+            <Button fx:id="btn_Empleados" layoutX="21.0" layoutY="212.0" mnemonicParsing="false" onAction="#btn_Empleados" prefHeight="64.0" prefWidth="272.0" style="-fx-background-color: #c2c2c2; -fx-background-radius: 60;" text="Empleados" textFill="#3a085e">
                <font>
                   <Font name="Arial Bold Italic" size="18.0" />
                </font>
@@ -43,7 +43,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btn_proyectos" layoutX="2.0" layoutY="276.0" mnemonicParsing="false" onAction="#btn_Proyectos" prefHeight="64.0" prefWidth="272.0" style="-fx-background-color: #c2c2c2; -fx-background-radius: 60;" text="Proyectos" textFill="#3a085e">
+            <Button fx:id="btn_proyectos" layoutX="22.0" layoutY="276.0" mnemonicParsing="false" onAction="#btn_Proyectos" prefHeight="64.0" prefWidth="272.0" style="-fx-background-color: #c2c2c2; -fx-background-radius: 60;" text="Proyectos" textFill="#3a085e">
                <font>
                   <Font name="Arial Bold Italic" size="18.0" />
                </font>
@@ -55,7 +55,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btn_Estadisticas" layoutX="2.0" layoutY="340.0" mnemonicParsing="false" onAction="#btn_Estadisticas" prefHeight="64.0" prefWidth="272.0" style="-fx-background-color: #c2c2c2; -fx-background-radius: 60;" text="Estadisticas" textFill="#3a085e">
+            <Button fx:id="btn_Estadisticas" layoutX="22.0" layoutY="340.0" mnemonicParsing="false" onAction="#btn_Estadisticas" prefHeight="64.0" prefWidth="272.0" style="-fx-background-color: #c2c2c2; -fx-background-radius: 60;" text="Estadisticas" textFill="#3a085e">
                <font>
                   <Font name="Arial Bold Italic" size="18.0" />
                </font>
@@ -68,7 +68,7 @@
                </graphic>
             </Button>
          </children></AnchorPane>
-      <AnchorPane layoutX="480.0" layoutY="98.0" prefHeight="632.0" prefWidth="796.0" style="-fx-background-color: #b1b1b1; -fx-background-radius: 30;" AnchorPane.bottomAnchor="41.0" AnchorPane.topAnchor="95.0">
+      <AnchorPane layoutX="480.0" layoutY="98.0" prefHeight="632.0" prefWidth="796.0" style="-fx-background-radius: 30;" styleClass="panel" stylesheets="@style/for_all.css" AnchorPane.bottomAnchor="41.0" AnchorPane.topAnchor="95.0">
          <children>
             <Pane layoutX="148.0" layoutY="60.0" prefHeight="151.0" prefWidth="200.0" style="-fx-background-color: #c2c2c2; -fx-background-radius: 25;">
                <children>

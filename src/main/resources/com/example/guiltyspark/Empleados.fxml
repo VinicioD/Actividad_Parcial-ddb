@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #3a085e;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiltyspark.controller.CONTROLLER_Empleados">
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" styleClass="login-bg" stylesheets="@style/Empleados.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiltyspark.controller.CONTROLLER_Empleados">
    <children>
-      <AnchorPane prefHeight="49.0" prefWidth="1366.0" style="-fx-background-color: #b1b1b1;" AnchorPane.bottomAnchor="719.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="51.0" prefWidth="1366.0" style="-fx-background-color: #b1b1b1;" AnchorPane.bottomAnchor="719.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0">
          <children>
             <ImageView fx:id="btn_cerrar" fitHeight="37.0" fitWidth="40.0" layoutX="1312.0" layoutY="6.0" onMouseClicked="#cerrar" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="17.0">
                <image>
@@ -24,26 +24,26 @@
                </image>
             </ImageView>
          </children></AnchorPane>
-      <AnchorPane layoutX="82.0" layoutY="95.0" prefHeight="632.0" prefWidth="275.0" style="-fx-background-color: #b1b1b1; -fx-background-radius: 30;" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="82.0" AnchorPane.rightAnchor="1009.0" AnchorPane.topAnchor="95.0">
+      <AnchorPane layoutX="82.0" layoutY="95.0" prefHeight="632.0" prefWidth="275.0" styleClass="panel" stylesheets="@style/Empleados.css" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="82.0" AnchorPane.rightAnchor="1009.0" AnchorPane.topAnchor="95.0">
          <children>
-            <Label layoutX="73.0" layoutY="90.0" text="Empleados" textFill="#3a085e">
+            <Label layoutX="92.0" layoutY="85.0" text="Empleados" textFill="#3a085e">
                <font>
                   <Font name="Arial Bold Italic" size="24.0" />
                </font>
             </Label>
-            <ImageView fx:id="btn_agregar" fitHeight="46.0" fitWidth="37.0" layoutX="119.0" layoutY="557.0" onMouseClicked="#Agregar_empleado" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="btn_agregar" fitHeight="46.0" fitWidth="37.0" layoutX="139.0" layoutY="557.0" onMouseClicked="#Agregar_empleado" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/icono_agregar.png" />
                </image>
             </ImageView>
-            <TableView fx:id="tbl_Empleados" layoutY="140.0" prefHeight="305.0" prefWidth="275.0" style="-fx-background-radius: 30;">
+            <TableView fx:id="tbl_Empleados" layoutX="35.0" layoutY="144.0" prefHeight="305.0" prefWidth="275.0" style="-fx-background-radius: 30;" AnchorPane.rightAnchor="0.0">
               <columns>
                 <TableColumn prefWidth="75.0" />
               </columns>
             </TableView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="539.0" layoutY="95.0" prefHeight="632.0" prefWidth="683.0" style="-fx-background-color: #b1b1b1; -fx-background-radius: 30;" AnchorPane.bottomAnchor="41.0" AnchorPane.rightAnchor="144.0" AnchorPane.topAnchor="95.0">
+      <AnchorPane layoutX="539.0" layoutY="95.0" prefHeight="632.0" prefWidth="683.0" styleClass="panel" stylesheets="@style/Empleados.css" AnchorPane.bottomAnchor="41.0" AnchorPane.rightAnchor="144.0" AnchorPane.topAnchor="95.0">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="96.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -60,7 +60,7 @@
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Label>
-            <Pane layoutY="222.0" prefHeight="414.0" prefWidth="683.0" style="-fx-background-color: #c2c2c2; -fx-background-radius: 30;" AnchorPane.bottomAnchor="0.0">
+            <Pane layoutX="35.0" layoutY="218.0" prefHeight="414.0" prefWidth="705.0" style="-fx-background-color: #c2c2c2; -fx-background-radius: 30;" AnchorPane.bottomAnchor="0.0">
                <children>
                   <Label layoutX="80.0" layoutY="36.0" text="Departamento:">
                      <font>

@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="main_pain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #3a085e;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiltyspark.controller.HelloController">
+<AnchorPane fx:id="main_pain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="login-bg" stylesheets="@style/vista1.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiltyspark.controller.HelloController">
    <children>
-      <AnchorPane prefHeight="768.0" prefWidth="270.0" style="-fx-background-color: #b1b1b1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1096.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="768.0" prefWidth="270.0" styleClass="panel" stylesheets="@style/vista1.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1096.0" AnchorPane.topAnchor="0.0">
          <children>
             <VBox fx:id="pane_menu" layoutY="187.0" prefHeight="581.0" prefWidth="270.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="187.0">
                <children>

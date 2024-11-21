@@ -1,0 +1,7 @@
+.login-bg{
+    -fx-background-color:linear-gradient(to bottom right, #000000, #3a085e,  #3a085e);
+}
+
+.panel {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #999898, #c2c2c2, #e1e1e1);
+}
