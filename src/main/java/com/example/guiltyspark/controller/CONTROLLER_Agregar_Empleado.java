@@ -1,6 +1,7 @@
 package com.example.guiltyspark.controller;
 
 import com.example.guiltyspark.HelloApplication;
+import com.example.guiltyspark.database.Agregar_EmpleadosDAO;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -57,6 +58,7 @@ public class CONTROLLER_Agregar_Empleado {
 
     @FXML
     private void initialize() {
+
         // Configurar ComboBox
         Cb_Departamento.setItems(FXCollections.observableArrayList("Opción 1", "Opción 2", "Opción 3"));
 
@@ -76,6 +78,9 @@ public class CONTROLLER_Agregar_Empleado {
 
         // Manejar el evento del botón Ingresar
         Btn_Ingresar.setOnAction(this::handleIngresar);
+
+        // Inicializar DAO
+        Agregar_EmpleadosDAO dao = new Agregar_EmpleadosDAO();
     }
 
     private void setTextFieldToLettersOnly(TextField textField) {
@@ -144,7 +149,7 @@ public class CONTROLLER_Agregar_Empleado {
 
 
     private void handleIngresar(ActionEvent event) {
-        if (areAllFieldsFilled()) {
+        if (Campos_llenos()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Éxito");
             alert.setHeaderText(null);
@@ -159,7 +164,7 @@ public class CONTROLLER_Agregar_Empleado {
         }
     }
 
-    private boolean areAllFieldsFilled() {
+    private boolean Campos_llenos() {
         return !txt_Nombre.getText().isEmpty() &&
                 !txt_Apellido.getText().isEmpty() &&
                 !txt_DUI.getText().isEmpty() &&

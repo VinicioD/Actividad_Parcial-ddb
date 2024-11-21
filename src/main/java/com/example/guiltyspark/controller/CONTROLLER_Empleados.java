@@ -1,6 +1,11 @@
 package com.example.guiltyspark.controller;
 
 import com.example.guiltyspark.HelloApplication;
+import com.example.guiltyspark.database.EmpleadoDAO;
+import com.example.guiltyspark.model.Empleado;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -9,6 +14,8 @@ import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+
+import java.sql.SQLException;
 
 public class CONTROLLER_Empleados {
 
@@ -37,8 +44,12 @@ public class CONTROLLER_Empleados {
     private ImageView btn_regresar;
 
     @FXML
-    private TableView<?> tbl_Empleados;
+    private TableView<Empleado> tbl_Empleados;
 
+    @FXML
+    private TableColumn<Empleado, String> colNombre;
+
+    private EmpleadoDAO empleadoDAO;
 
     @FXML
     void Agregar_empleado(MouseEvent event) {
@@ -67,7 +78,6 @@ public class CONTROLLER_Empleados {
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 stage.close();
             }
-
         });
     }
 
@@ -92,5 +102,36 @@ public class CONTROLLER_Empleados {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    @FXML
+    private void initialize() throws SQLException {
+        // Inicializar el DAO
+        empleadoDAO = new EmpleadoDAO();
+
+        // Configurar la columna para mostrar solo los nombres de los empleados
+        colNombre.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getNombre()));
+
+        // Cargar los empleados
+        cargarEmpleados();
+
+        // Detectar la selección de una fila en la TableView
+        tbl_Empleados.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> mostrarDetallesEmpleado(newValue));
+    }
+
+    private void cargarEmpleados() throws SQLException {
+        // Obtener la lista de empleados desde el DAO y establecerla en el TableView
+        tbl_Empleados.setItems(empleadoDAO.obtenerEmpleados());
+    }
+
+    private void mostrarDetallesEmpleado(Empleado empleado) {
+        if (empleado != null) {
+            // Mostrar los detalles del empleado seleccionado
+            // Aquí puedes actualizar las etiquetas u otros componentes de la UI con los datos del empleado
+            System.out.println("Empleado seleccionado: " + empleado.getNombre());
+        } else {
+            // Si no se selecciona ningún empleado, limpiar los detalles mostrados
+            System.out.println("No hay empleado seleccionado.");
+        }
     }
 }

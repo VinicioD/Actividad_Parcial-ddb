@@ -32,17 +32,47 @@ public class CONTROLLER_Estadisticas {
 
     @FXML
     void btn_Empleados(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Empleados.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
 
+            Stage stage = (Stage) btn_Empleados.getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            showAlert("Error", "No se pudo cargar el menú principal.");
+        }
     }
 
     @FXML
     void btn_Estadisticas(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Estadisticas.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
 
+            Stage stage = (Stage) btn_Empleados.getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            showAlert("Error", "No se pudo cargar el menú principal.");
+        }
     }
 
     @FXML
     void btn_Proyectos(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Proyectos.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
 
+            Stage stage = (Stage) btn_Empleados.getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            showAlert("Error", "No se pudo cargar el menú principal.");
+        }
     }
 
 

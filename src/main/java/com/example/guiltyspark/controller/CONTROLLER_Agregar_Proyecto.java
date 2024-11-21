@@ -1,6 +1,8 @@
 package com.example.guiltyspark.controller;
 
 import com.example.guiltyspark.HelloApplication;
+import com.example.guiltyspark.database.Agregar_ProyectosDAO;
+import com.example.guiltyspark.model.Proyecto;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,6 +12,10 @@ import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+
+import java.sql.SQLException;
+import java.time.ZoneId;
+import java.util.Date;
 
 public class CONTROLLER_Agregar_Proyecto {
 
@@ -38,6 +44,9 @@ public class CONTROLLER_Agregar_Proyecto {
 
     @FXML
     private void initialize() {
+        // Inicializar DAO
+        Agregar_ProyectosDAO dao = new Agregar_ProyectosDAO();
+
         // Validar que TextField solo permita letras
         setTextFieldToLettersOnly(txt_NombreProyecto);
 
@@ -96,17 +105,24 @@ public class CONTROLLER_Agregar_Proyecto {
 
     private void handleIngresar(ActionEvent event) {
         if (areAllFieldsFilled()) {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Éxito");
-            alert.setHeaderText(null);
-            alert.setContentText("Proyecto creado correctamente");
-            alert.showAndWait();
+            // Obtener datos del formulario
+            String nombreProyecto = txt_NombreProyecto.getText();
+            Date fechaInicio = Date.from(Date_FechaInicio.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());
+            Date fechaFin = Date.from(Date_FechaFin.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());
+
+            // Crear objeto Proyecto
+            Proyecto proyecto = new Proyecto(nombreProyecto, fechaInicio, fechaFin);
+
+            // Insertar proyecto en la base de datos
+            try {
+                Agregar_ProyectosDAO.insertarProyecto(proyecto);
+                showAlert("Éxito", "Proyecto creado correctamente");
+            } catch (SQLException e) {
+                showAlert("Error", "No se pudo crear el proyecto: " + e.getMessage());
+                e.printStackTrace();
+            }
         } else {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText(null);
-            alert.setContentText("Por favor, complete todos los campos");
-            alert.showAndWait();
+            showAlert("Error", "Por favor, complete todos los campos");
         }
     }
 

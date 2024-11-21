@@ -73,7 +73,7 @@ public class HelloController {
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
-            showAlert("Error", "No se pudo cargar el menú principal.");
+            showAlert("Error", "No se pudo cargar vista empleados.");
         }
     }
 
